@@ -1,0 +1,32 @@
+.poke_team {
+  position: fixed;
+  overflow: hidden;
+  height: 500px;
+  top: 54px;
+  background-color: rgb(47, 120, 184);
+}
+
+.poke_team:hover {
+  overflow-y: scroll;
+  padding-right: 2px;
+}
+
+.show_team {
+  left: 10px;
+  transition: left 0.2s;
+}
+
+.hide_team {
+  left: -100vw;
+  transition: left 0.2s;
+}
+
+.poke_team::-webkit-scrollbar {
+  width: 10px;
+}
+
+.poke_team::-webkit-scrollbar-thumb {
+  background-color: #0d6efd;
+  border-radius: 5px;
+  color: transparent;
+}
