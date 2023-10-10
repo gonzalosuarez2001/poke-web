@@ -11,12 +11,12 @@ export default function PokeTeam(props) {
 
   let elements = [];
   for (let i = 0; i < pokeContext.pokeTeamEmptyPlaces; i++) {
-    elements.push(<PokeTeamEmptyCard key={i}/>);
+    elements.push(<PokeTeamEmptyCard key={i} />);
   }
 
   return (
     <div
-      className={`${props.teamView} row justify-content-center container-fluid rounded border bg-light poke_team`}
+      className={`${props.teamView} row justify-content-center container-fluid rounded bg-light poke_team`}
     >
       {pokeContext.pokeTeam.map((pokemon) => {
         return (
