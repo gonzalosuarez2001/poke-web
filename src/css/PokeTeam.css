@@ -1,6 +1,6 @@
 .poke_team {
   position: fixed;
-  overflow: hidden;
+  overflow-y: auto;
   height: 85vh;
   top: 7.5vh;
   width: 180px !important;
@@ -36,10 +36,3 @@
   display: none;
 }
 
-@media (max-width: 576px) {
-  /* Tus estilos CSS para pantallas de 576px o más */
-  .poke_team:hover {
-    
-    overflow-y: auto;
-  }
-}
