@@ -1,4 +1,4 @@
-import "./css/PokeTeamEmptyCard.css"
+import "../css/PokeTeamEmptyCard.css"
 
 export default function PokeTeamEmptyCard() {
   return (

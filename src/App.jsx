@@ -1,7 +1,7 @@
 import { useState } from "react";
-import PokeList from "./PokeList";
-import PokeTeam from "./PokeTeam";
-import { PokeContext } from "./PokeContext";
+import PokeList from "./pages/PokeList";
+import PokeTeam from "./pages/PokeTeam";
+import { PokeContext } from "./contexts/PokeContext";
 
 function App() {
   const [pokeList, setPokeList] = useState([]);
@@ -16,17 +16,13 @@ function App() {
       const data = await res.json();
       const names = await data.results.map((pokemon) => pokemon.name);
 
-      const sprites = [];
+      const pokeInfo = [];
       for (const name of names) {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
         const data = await res.json();
-        sprites.push(data.sprites.front_default);
+        pokeInfo.push(data);
       }
-      const pokeList = names.map((name, index) => ({
-        name: name,
-        img_url: sprites[index],
-      }));
-      setPokeList(pokeList);
+      setPokeList(pokeInfo);
     } catch (error) {
       console.error("Error fetching pokemons:", error);
     }
@@ -65,7 +61,14 @@ function App() {
         </button>
       </div>
       <PokeContext.Provider
-        value={{ listPokemon, addPokemon, removePokemon, pokeList, pokeTeam, pokeTeamEmptyPlaces }}
+        value={{
+          listPokemon,
+          addPokemon,
+          removePokemon,
+          pokeList,
+          pokeTeam,
+          pokeTeamEmptyPlaces,
+        }}
       >
         <PokeList />
         <PokeTeam teamView={teamView} />

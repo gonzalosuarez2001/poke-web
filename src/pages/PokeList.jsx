@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import PokeListCard from "./PokeListCard";
-import { PokeContext } from "./PokeContext";
+import PokeListCard from "../components/PokeListCard";
+import { PokeContext } from "../contexts/PokeContext";
 
 export default function PokeList() {
   const pokeContext = useContext(PokeContext);
@@ -14,7 +14,8 @@ export default function PokeList() {
           <PokeListCard
             key={index}
             name={pokemon.name}
-            img_url={pokemon.img_url}
+            img_url={pokemon.sprites.front_default}
+            types={pokemon.types}
           />
         );
       })}
