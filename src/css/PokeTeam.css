@@ -1,6 +1,7 @@
 .poke_team {
   position: fixed;
   overflow-y: auto;
+  overflow-x: hidden;
   height: 85vh;
   top: 7.5vh;
   width: 180px !important;
@@ -29,10 +30,24 @@
   width: 0px;
 }
 
-.poke_team::-webkit-scrollbar-thumb {
-  background-color: #0d6efd;
-  border-radius: 5px;
-  color: transparent;
-  display: none;
-}
+@media (min-width: 576px) {
+  
+  .poke_team {
+    overflow-y: hidden;
+  }
 
+  .poke_team:hover {
+    overflow-y: auto;
+    padding-right: 7px;
+  }
+
+  .poke_team::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .poke_team::-webkit-scrollbar-thumb {
+    background-color: #0d6efd;
+    border-radius: 5px;
+    color: transparent;
+  }
+}
