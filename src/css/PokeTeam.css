@@ -34,3 +34,11 @@
   border-radius: 5px;
   color: transparent;
 }
+
+@media (max-width: 576px) {
+  /* Tus estilos CSS para pantallas de 576px o más */
+  .poke_team:hover {
+    padding-right: 12px;
+    overflow: scroll;
+  }
+}
