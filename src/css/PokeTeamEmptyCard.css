@@ -1,5 +1,5 @@
 .poke_team_empty_card {
-    padding: 93px 0 93px 0;
+  min-height: 185.33px;
   box-shadow: 3px 4px 11px 1px rgba(171, 171, 171, 0.63);
   -webkit-box-shadow: 3px 4px 11px 1px rgba(171, 171, 171, 0.63);
   -moz-box-shadow: 3px 4px 11px 1px rgba(171, 171, 171, 0.63);

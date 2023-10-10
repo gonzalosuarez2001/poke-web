@@ -8,7 +8,6 @@ export default function PokeTeamCard(props) {
 
   return (
     <div className="col-11 text-center rounded poke_team_card my-1">
-      {/*<h4 className="pt-3 text-secondary">{props.name}</h4>*/}
       <img className="pt-3 col-12" src={props.img_url} />
       <button
         onClick={() => pokeContext.removePokemon(props.id)}
