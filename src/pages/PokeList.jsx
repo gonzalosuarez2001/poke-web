@@ -8,7 +8,7 @@ export default function PokeList() {
 
   pokeContext.listPokemon();
 
-  if (pokeContext.loadingPokeList == false) {
+  if (pokeContext.loadingPokeList == true) {
     return (
       <div className="container d-flex flex-column align-items-center">
         <div className="poke_list_block"></div>
