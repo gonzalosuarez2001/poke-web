@@ -11,7 +11,7 @@ export default function PokeList() {
   if (pokeContext.loadingPokeList == true) {
     return (
       <div className="container d-flex flex-column align-items-center">
-        <div className="poke_list_block"></div>
+        <div className="poke_loading_block"></div>
         <div className="col-11 text-center fw-bold my-5 rounded loading">
           <p className="m-0 p-2 text-secondary">Loading Pokemons</p>
         </div>
