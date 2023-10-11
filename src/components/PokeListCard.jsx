@@ -11,7 +11,7 @@ export default function PokeListCard(props) {
 
   return (
     <div className="col-9 col-sm-5 col-md-3 col-xl-2 col-xxl-2 text-center rounded poke_list_card m-2 px-2">
-      <h4 className="pt-3 text-secondary">{name}</h4>
+      <h4 className="pt-3 text-secondary fw-bold">{name}</h4>
       <img className="pt-3 col-5" src={props.img_url} />
       <div className="row justify-content-center pt-3">
         {props.types.map((type, index) => {
