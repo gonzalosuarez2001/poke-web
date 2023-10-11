@@ -16,7 +16,7 @@ export default function PokeTeam(props) {
 
   return (
     <div
-      className={`${props.teamView} row justify-content-center container-fluid rounded bg-light poke_team`}
+      className={`${props.teamView} row justify-content-center container-fluid rounded bg-light py-1 poke_team`}
     >
       {pokeContext.pokeTeam.map((pokemon) => {
         return (

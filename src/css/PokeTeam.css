@@ -10,12 +10,7 @@
   -moz-box-shadow: 3px 4px 11px 1px rgba(171, 171, 171, 0.63);
   border: 2px solid #0d6efd;
 }
-/*
-.poke_team:hover {
-  overflow-y: scroll;
-  padding-right: 7px;
-}
-*/
+
 .show_team {
   left: 15px;
   transition: left 0.2s;

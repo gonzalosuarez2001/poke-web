@@ -7,7 +7,7 @@ export default function PokeTeamCard(props) {
   const pokeContext = useContext(PokeContext);
 
   return (
-    <div className="col-11 text-center rounded poke_team_card my-1">
+    <div className="col-12 text-center rounded poke_team_card my-1">
       <img className="pt-3 col-12" src={props.img_url} />
       <button
         onClick={() => pokeContext.removePokemon(props.id)}
