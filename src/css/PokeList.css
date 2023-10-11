@@ -1,11 +1,10 @@
 .poke_list_block {
-  height: 64px;
+  height: 100px;
 }
 
 .loading {
-  border: 0px solid #0d6efd;
-  max-width: 350px !important;
-  animation: change_bg 1.5s linear infinite;
+  max-width: 300px !important;
+  animation: change_bg 1.25s linear infinite;
 }
 
 @keyframes change_bg {
@@ -13,7 +12,13 @@
     background-color: #fff;
     width: 160px;
   }
+  30% {
+    background-color: #cce0ff;
+  }
   50% {
+    width: 300px;
+  }
+  60% {
     background-color: #cce0ff;
   }
   100% {
