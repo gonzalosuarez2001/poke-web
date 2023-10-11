@@ -13,7 +13,7 @@ export default function PokeTeamCard(props) {
         onClick={() => pokeContext.removePokemon(props.id)}
         className="btn btn-danger col-12 my-2"
       >
-        Eliminar
+        Delete
       </button>
     </div>
   );

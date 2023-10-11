@@ -5,6 +5,7 @@ import { PokeContext } from "./contexts/PokeContext";
 
 function App() {
   const [pokeList, setPokeList] = useState([]);
+  const [loadingPokeList, setLoadingPokeList] = useState(true);
   const [pokeTeam, setPokeTeam] = useState([]);
   const [pokeTeamEmptyPlaces, setPokeTeamEmptyPlaces] = useState(6);
   const [pokeTeamId, setPokeTeamId] = useState(0);
@@ -23,6 +24,7 @@ function App() {
         pokeInfo.push(data);
       }
       setPokeList(pokeInfo);
+      setLoadingPokeList(false);
     } catch (error) {
       console.error("Error fetching pokemons:", error);
     }
@@ -57,7 +59,7 @@ function App() {
           onClick={() => handleTeamView()}
           className="btn btn-primary col-12 my-2"
         >
-          Mostra Equipo
+          Show Team
         </button>
       </div>
       <PokeContext.Provider
@@ -68,6 +70,7 @@ function App() {
           pokeList,
           pokeTeam,
           pokeTeamEmptyPlaces,
+          loadingPokeList,
         }}
       >
         <PokeList />
