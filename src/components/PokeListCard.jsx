@@ -22,7 +22,7 @@ export default function PokeListCard(props) {
         onClick={() => pokeContext.addPokemon(name, props.img_url)}
         className="btn btn-primary col-12 my-3"
       >
-        Agregar
+        Add to Team
       </button>
     </div>
   );
