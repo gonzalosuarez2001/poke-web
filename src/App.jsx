@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PokeList from "./pages/PokeList";
 import PokeTeam from "./pages/PokeTeam";
+import PokeNav from "./pages/PokeNav";
 import { PokeContext } from "./contexts/PokeContext";
 
 function App() {
@@ -53,30 +54,24 @@ function App() {
   }
 
   return (
-    <div>
-      <div className="container-fluid">
-        <button
-          onClick={() => handleTeamView()}
-          className="btn btn-primary col-12 my-2"
-        >
-          Show Team
-        </button>
-      </div>
+    <>
       <PokeContext.Provider
         value={{
           listPokemon,
           addPokemon,
           removePokemon,
+          handleTeamView,
           pokeList,
           pokeTeam,
           pokeTeamEmptyPlaces,
           loadingPokeList,
         }}
       >
+        <PokeNav />
         <PokeList />
         <PokeTeam teamView={teamView} />
       </PokeContext.Provider>
-    </div>
+    </>
   );
 }
 

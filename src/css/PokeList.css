@@ -1,3 +1,7 @@
+.poke_list_block {
+  height: 64px;
+}
+
 .loading {
   border: 2px solid #0d6efd;
   max-width: 350px !important;
