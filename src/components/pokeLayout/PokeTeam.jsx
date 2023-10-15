@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { PokeContext } from "../contexts/PokeContext";
-import PokeTeamCard from "../components/PokeTeamCard";
+import { PokeContext } from "../../contexts/PokeContext";
+import PokeTeamCard from "./PokeTeamCard";
 import PropTypes from "prop-types";
-import PokeTeamEmptyCard from "../components/PokeTeamEmptyCard";
-import "../css/PokeTeam.css";
-import "../css/PokeTeamEmptyCard.css";
+import PokeTeamEmptyCard from "./PokeTeamEmptyCard";
+import "../../css/PokeTeam.css";
+import "../../css/PokeTeamEmptyCard.css";
 
 export default function PokeTeam(props) {
   const pokeContext = useContext(PokeContext);

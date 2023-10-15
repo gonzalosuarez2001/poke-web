@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import PropTypes from "prop-types";
-import "../css/PokeTeamCard.css";
-import { PokeContext } from "../contexts/PokeContext";
+import "../../css/PokeTeamCard.css";
+import { PokeContext } from "../../contexts/PokeContext";
 
 export default function PokeTeamCard(props) {
   const pokeContext = useContext(PokeContext);

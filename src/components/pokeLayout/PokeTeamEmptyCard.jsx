@@ -1,5 +1,5 @@
-import "../css/PokeTeamEmptyCard.css";
-import pokeBallImage from "../../public/pokeBall.png"
+import "../../css/PokeTeamEmptyCard.css";
+import pokeBallImage from "../../../public/pokeBall.png"
 
 export default function PokeTeamEmptyCard() {
   return (

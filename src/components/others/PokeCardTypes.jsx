@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "../css/PokeCardTypes.css";
+import "../../css/PokeCardTypes.css";
 
 export default function PokeCardTypes(props) {
   return (

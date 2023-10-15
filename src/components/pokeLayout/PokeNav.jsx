@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { PokeContext } from "../contexts/PokeContext";
-import "../css/PokeNav.css"
+import { PokeContext } from "../../contexts/PokeContext";
+import "../../css/PokeNav.css"
 
 export default function PokeNav() {
   const pokeContext = useContext(PokeContext);

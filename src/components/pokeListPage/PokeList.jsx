@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import PokeListCard from "../components/PokeListCard";
-import { PokeContext } from "../contexts/PokeContext";
-import "../css/PokeList.css";
+import PokeListCard from "./PokeListCard";
+import { PokeContext } from "../../contexts/PokeContext";
+import "../../css/PokeList.css";
 
 export default function PokeList() {
   const pokeContext = useContext(PokeContext);
