@@ -1,5 +1,15 @@
 .poke_list_card {
-    box-shadow: 3px 4px 11px 1px rgba(171, 171, 171, 0.63);
-    -webkit-box-shadow: 3px 4px 11px 1px rgba(171, 171, 171, 0.63);
-    -moz-box-shadow: 3px 4px 11px 1px rgba(171, 171, 171, 0.63);
-  }
+  box-shadow: 3px 4px 11px 1px rgba(171, 171, 171, 0.63);
+  -webkit-box-shadow: 3px 4px 11px 1px rgba(171, 171, 171, 0.63);
+  -moz-box-shadow: 3px 4px 11px 1px rgba(171, 171, 171, 0.63);
+}
+
+.white {
+  background-color: #fff;
+  transition: .01s;
+}
+
+.skyblue {
+  background-color: #cce0ff;
+  transition: .01s;
+}

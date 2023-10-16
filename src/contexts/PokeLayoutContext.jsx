@@ -1,9 +1,9 @@
 import { createContext, useState } from "react";
 import { PropTypes } from "prop-types";
 
-export const PokeNavContext = createContext();
+export const PokeLayoutContext = createContext();
 
-export function PokeNavContextProvider({ children }) {
+export function PokeLayoutContextProvider({ children }) {
   const [pokeTeam, setPokeTeam] = useState([]);
   const [pokeTeamEmptyPlaces, setPokeTeamEmptyPlaces] = useState(6);
   const [pokeTeamId, setPokeTeamId] = useState(0);
@@ -32,14 +32,21 @@ export function PokeNavContextProvider({ children }) {
   }
 
   return (
-    <PokeNavContext.Provider
-      value={{ addPokemon, removePokemon, handleTeamView, teamView, pokeTeam, pokeTeamEmptyPlaces }}
+    <PokeLayoutContext.Provider
+      value={{
+        addPokemon,
+        removePokemon,
+        handleTeamView,
+        teamView,
+        pokeTeam,
+        pokeTeamEmptyPlaces,
+      }}
     >
       {children}
-    </PokeNavContext.Provider>
+    </PokeLayoutContext.Provider>
   );
 }
 
-PokeNavContextProvider.propTypes = {
+PokeLayoutContextProvider.propTypes = {
   children: PropTypes.node,
 };

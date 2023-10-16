@@ -1,23 +1,23 @@
 import { useContext } from "react";
-import { PokeNavContext } from "../../contexts/PokeNavContext";
+import { PokeLayoutContext } from "../../contexts/PokeLayoutContext";
 import PokeTeamCard from "./PokeTeamCard";
 import PokeTeamEmptyCard from "./PokeTeamEmptyCard";
 import "../../css/PokeTeam.css";
 import "../../css/PokeTeamEmptyCard.css";
 
 export default function PokeTeam() {
-  const pokeNavContext = useContext(PokeNavContext);
+  const pokeLayoutContext = useContext(PokeLayoutContext);
 
   let elements = [];
-  for (let i = 0; i < pokeNavContext.pokeTeamEmptyPlaces; i++) {
+  for (let i = 0; i < pokeLayoutContext.pokeTeamEmptyPlaces; i++) {
     elements.push(<PokeTeamEmptyCard key={i} />);
   }
 
   return (
     <div
-      className={`${pokeNavContext.teamView} row justify-content-center container-fluid rounded bg-light py-1 poke_team`}
+      className={`${pokeLayoutContext.teamView} row justify-content-center container-fluid rounded bg-light py-1 poke_team`}
     >
-      {pokeNavContext.pokeTeam.map((pokemon) => (
+      {pokeLayoutContext.pokeTeam.map((pokemon) => (
         <PokeTeamCard
           key={pokemon.id}
           id={pokemon.id}

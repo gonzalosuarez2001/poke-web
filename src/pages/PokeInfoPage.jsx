@@ -7,3 +7,13 @@ export default function PokeInfoPage() {
     </>
   );
 }
+
+/*
+img
+name
+types
+pokedex number
+sprites (con boton?)
+heigth/weigth
+stats: hp/attack/defense/special-attack/special-defense/speed
+*/

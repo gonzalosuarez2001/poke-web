@@ -1,5 +1,5 @@
 import PokeListPage from "./pages/PokeListPage";
-import { PokeNavContextProvider } from "./contexts/PokeNavContext";
+import { PokeLayoutContextProvider } from "./contexts/PokeLayoutContext";
 import PokeInfoPage from "./pages/PokeInfoPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PokeNav from "./components/pokeLayout/PokeNav";
@@ -8,7 +8,7 @@ import PokeTeam from "./components/pokeLayout/PokeTeam";
 function App() {
   return (
     <>
-      <PokeNavContextProvider>
+      <PokeLayoutContextProvider>
         <Router>
           <PokeNav />
           <Routes>
@@ -17,7 +17,7 @@ function App() {
           </Routes>
           <PokeTeam />
         </Router>
-      </PokeNavContextProvider>
+      </PokeLayoutContextProvider>
     </>
   );
 }
