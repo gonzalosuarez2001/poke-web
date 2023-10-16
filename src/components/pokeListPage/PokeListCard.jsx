@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
 import "../../css/PokeListCard.css";
-import { PokeContext } from "../../contexts/PokeContext";
+
+import { PokeNavContext } from "../../contexts/PokeNavContext";
 import { useContext } from "react";
 import PokeCardTypes from "../others/PokeCardTypes";
 
 export default function PokeListCard(props) {
-  const pokeContext = useContext(PokeContext);
+  const pokeNavContext = useContext(PokeNavContext);
 
   const name = props.name.charAt(0).toUpperCase() + props.name.slice(1);
 
@@ -19,7 +20,7 @@ export default function PokeListCard(props) {
         })}
       </div>
       <button
-        onClick={() => pokeContext.addPokemon(name, props.img_url)}
+        onClick={() => pokeNavContext.addPokemon(name, props.img_url)}
         className="btn btn-primary col-12 my-3"
       >
         Add to Team

@@ -1,16 +1,10 @@
 import { useState } from "react";
 import PokeList from "../components/pokeListPage/PokeList";
-import PokeTeam from "../components/pokeLayout/PokeTeam";
-import PokeNav from "../components/pokeLayout/PokeNav";
 import { PokeContext } from "../contexts/PokeContext";
 
 export default function PokeListPage() {
   const [pokeList, setPokeList] = useState([]);
   const [loadingPokeList, setLoadingPokeList] = useState(true);
-  const [pokeTeam, setPokeTeam] = useState([]);
-  const [pokeTeamEmptyPlaces, setPokeTeamEmptyPlaces] = useState(6);
-  const [pokeTeamId, setPokeTeamId] = useState(0);
-  const [teamView, setTeamView] = useState("hide_team");
 
   async function listPokemon() {
     try {
@@ -31,45 +25,16 @@ export default function PokeListPage() {
     }
   }
 
-  function addPokemon(name, img_url) {
-    if (pokeTeam.length < 6) {
-      setPokeTeam([...pokeTeam, { id: pokeTeamId, name, img_url }]);
-      setPokeTeamId(pokeTeamId + 1);
-      setPokeTeamEmptyPlaces(pokeTeamEmptyPlaces - 1);
-    }
-  }
-
-  function removePokemon(id) {
-    const newPokeTeam = pokeTeam.filter((pokemon) => pokemon.id != id);
-    setPokeTeam(newPokeTeam);
-    setPokeTeamEmptyPlaces(pokeTeamEmptyPlaces + 1);
-  }
-
-  function handleTeamView() {
-    if (teamView == "show_team") {
-      setTeamView("hide_team");
-    } else {
-      setTeamView("show_team");
-    }
-  }
-
   return (
     <>
       <PokeContext.Provider
         value={{
           listPokemon,
-          addPokemon,
-          removePokemon,
-          handleTeamView,
           pokeList,
-          pokeTeam,
-          pokeTeamEmptyPlaces,
           loadingPokeList,
         }}
       >
-        <PokeNav />
         <PokeList />
-        <PokeTeam teamView={teamView} />
       </PokeContext.Provider>
     </>
   );
