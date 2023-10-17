@@ -9,19 +9,21 @@ export default function PokeListCard(props) {
 
   const name = props.name.charAt(0).toUpperCase() + props.name.slice(1);
 
-  const [bg,setBg] = useState("white");
+  const [bg, setBg] = useState("white");
 
   function bgChange() {
-    setBg("skyblue")
+    setBg("skyblue");
     setTimeout(() => {
       setBg("white");
     }, 100);
   }
 
   return (
-    <div className={`${bg} col-9 col-sm-5 col-md-3 col-xl-2 col-xxl-2 text-center rounded m-2 px-2 poke_list_card`}>
+    <div
+      className={`${bg} col-9 col-sm-5 col-md-3 col-xl-2 col-xxl-2 text-center rounded m-2 px-2 poke_list_card`}
+    >
       <h4 className="pt-3 text-secondary fw-bold">{name}</h4>
-      <img className="pt-3 col-5" src={props.img_url} />
+      <img className="pt-3 col-5" src={props.front_sprite} />
       <div className="row justify-content-center pt-3">
         {props.types.map((type, index) => {
           return <PokeCardTypes key={index} type={type.type.name} />;
@@ -29,7 +31,16 @@ export default function PokeListCard(props) {
       </div>
       <button
         onClick={() => {
-          pokeLayoutContext.addPokemon(name, props.img_url);
+          pokeLayoutContext.addPokemon(
+            props.pokedex_id,
+            name,
+            props.front_sprite,
+            props.back_sprite,
+            props.types,
+            props.stats,
+            props.height,
+            props.weight
+          );
           bgChange();
         }}
         className="btn btn-primary col-12 my-3"
@@ -41,7 +52,12 @@ export default function PokeListCard(props) {
 }
 
 PokeListCard.propTypes = {
-  img_url: PropTypes.string.isRequired,
+  pokedex_id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+  front_sprite: PropTypes.string.isRequired,
+  back_sprite: PropTypes.string.isRequired,
   types: PropTypes.array.isRequired,
+  stats: PropTypes.array.isRequired,
+  height: PropTypes.number.isRequired,
+  weight: PropTypes.number.isRequired,
 };

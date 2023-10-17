@@ -8,7 +8,7 @@ export default function PokeTeamCard(props) {
 
   return (
     <div className="col-12 text-center rounded poke_team_card my-1">
-      <img className="pt-3 col-12" src={props.img_url} />
+      <img className="pt-3 col-12" src={props.front_sprite} />
       <button
         onClick={() => pokeLayoutContext.removePokemon(props.id)}
         className="btn btn-danger col-12 my-2"
@@ -20,7 +20,7 @@ export default function PokeTeamCard(props) {
 }
 
 PokeTeamCard.propTypes = {
-  img_url: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  front_sprite: PropTypes.string.isRequired,
 };

@@ -19,15 +19,20 @@ export default function PokeList() {
     );
   } else {
     return (
-      <div className="row justify-content-center poke_list">
+      <div className="row justify-content-center">
         <div className="poke_list_block"></div>
-        {pokeContext.pokeList.map((pokemon, index) => {
+        {pokeContext.pokeList.map((pokemon) => {
           return (
             <PokeListCard
-              key={index}
+              key={pokemon.id}
+              pokedex_id={pokemon.id}
               name={pokemon.name}
-              img_url={pokemon.sprites.front_default}
+              front_sprite={pokemon.sprites.front_default}
+              back_sprite={pokemon.sprites.back_default}
               types={pokemon.types}
+              stats={pokemon.stats}
+              height={pokemon.height}
+              weight={pokemon.weight}
             />
           );
         })}

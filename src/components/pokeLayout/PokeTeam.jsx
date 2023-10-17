@@ -22,7 +22,7 @@ export default function PokeTeam() {
           key={pokemon.id}
           id={pokemon.id}
           name={pokemon.name}
-          img_url={pokemon.img_url}
+          front_sprite={pokemon.front_sprite}
         />
       ))}
       {elements}

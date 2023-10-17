@@ -9,9 +9,31 @@ export function PokeLayoutContextProvider({ children }) {
   const [pokeTeamId, setPokeTeamId] = useState(0);
   const [teamView, setTeamView] = useState("hide_team");
 
-  function addPokemon(name, img_url) {
+  function addPokemon(
+    pokedex_id,
+    name,
+    front_sprite,
+    back_sprite,
+    types,
+    stats,
+    height,
+    weight
+  ) {
     if (pokeTeam.length < 6) {
-      setPokeTeam([...pokeTeam, { id: pokeTeamId, name, img_url }]);
+      setPokeTeam([
+        ...pokeTeam,
+        {
+          id: pokeTeamId,
+          pokedex_id,
+          name,
+          front_sprite,
+          back_sprite,
+          types,
+          stats,
+          height,
+          weight,
+        },
+      ]);
       setPokeTeamId(pokeTeamId + 1);
       setPokeTeamEmptyPlaces(pokeTeamEmptyPlaces - 1);
     }
