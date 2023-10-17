@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { PokeLayoutContext } from "../contexts/PokeLayoutContext";
-import PokeInfoCard from "../components/pokeInfo/pokeInfoCard";
+import PokeInfoCard from "../components/pokeInfo/PokeInfoCard";
 import "../css/PokeInfo.css"
 
 export default function PokeInfoPage() {
