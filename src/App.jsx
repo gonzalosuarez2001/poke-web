@@ -1,4 +1,5 @@
 import PokeListPage from "./pages/PokeListPage";
+import PokemonPage from "./pages/PokemonPage";
 import { PokeLayoutContextProvider } from "./contexts/PokeLayoutContext";
 import PokeInfoPage from "./pages/PokeInfoPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -11,11 +12,12 @@ function App() {
       <PokeLayoutContextProvider>
         <Router>
           <PokeNav />
+          <PokeTeam />
           <Routes>
             <Route path="/" element={<PokeListPage />} />
             <Route path="/pokeinfo" element={<PokeInfoPage />} />
+            <Route path="/pokemon/:name" element={<PokemonPage />} />
           </Routes>
-          <PokeTeam />
         </Router>
       </PokeLayoutContextProvider>
     </>

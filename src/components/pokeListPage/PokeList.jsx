@@ -1,14 +1,13 @@
 import { useContext } from "react";
 import PokeListCard from "./PokeListCard";
+import PropTypes from "prop-types";
 import { PokeContext } from "../../contexts/PokeContext";
 import "../../css/PokeList.css";
 
-export default function PokeList() {
+export default function PokeList(props) {
   const pokeContext = useContext(PokeContext);
 
-  pokeContext.listPokemon();
-
-  if (pokeContext.loadingPokeList == true) {
+  if (props.loadingPokeList == true) {
     return (
       <div className="container d-flex flex-column align-items-center">
         <div className="poke_loading_block"></div>
@@ -40,3 +39,7 @@ export default function PokeList() {
     );
   }
 }
+
+PokeList.propTypes = {
+  loadingPokeList: PropTypes.bool.isRequired,
+};

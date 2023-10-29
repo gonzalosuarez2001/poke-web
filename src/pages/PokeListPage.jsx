@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PokeList from "../components/pokeListPage/PokeList";
 import { PokeContext } from "../contexts/PokeContext";
 
@@ -25,16 +25,18 @@ export default function PokeListPage() {
     }
   }
 
+  useEffect(() => {
+    listPokemon();
+  }, []);
+
   return (
     <>
       <PokeContext.Provider
         value={{
-          listPokemon,
           pokeList,
-          loadingPokeList,
         }}
       >
-        <PokeList />
+        <PokeList loadingPokeList={loadingPokeList}/>
       </PokeContext.Provider>
     </>
   );

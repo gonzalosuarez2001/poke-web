@@ -3,3 +3,17 @@
   -webkit-box-shadow: 3px 4px 11px 1px rgba(171, 171, 171, 0.63);
   -moz-box-shadow: 3px 4px 11px 1px rgba(171, 171, 171, 0.63);
 }
+
+.poke_info_card_stats {
+  
+  background-color: #cce0ff;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+
+  .poke_info_card_stats {
+  
+    text-align: center;
+  }
+}

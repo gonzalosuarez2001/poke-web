@@ -7,7 +7,7 @@ export default function PokeInfoPage() {
   const pokeLayoutContext = useContext(PokeLayoutContext);
 
   return (
-    <div className="row justify-content-center">
+    <div className="row justify-content-center mb-3">
       <div className="poke_info_block"></div>
       {pokeLayoutContext.pokeTeam.map((pokemon) => {
         return (
