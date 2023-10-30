@@ -12,7 +12,18 @@ export default function PokeInfoPage() {
 
   return (
     <div className="row justify-content-center mb-3">
-      <div className="poke_info_block"></div>
+      {pokeLayoutContext.pokeTeam.length == 0 ? (
+        <div className="container d-flex flex-column align-items-center">
+          <div className="poke_loading_block"></div>
+          <div className="col-11 text-center fw-bold my-5 rounded">
+            <p className="m-0 p-2 text-secondary rounded">
+              PLEASE ADD POKEMONS TO THE TEAM TO SEE THEIR STATS
+            </p>
+          </div>
+        </div>
+      ) : (
+        <div className="poke_info_block"></div>
+      )}
       {pokeLayoutContext.pokeTeam.map((pokemon) => {
         return (
           <PokeInfoCard

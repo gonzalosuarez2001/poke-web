@@ -1,3 +1,7 @@
 .poke_info_block {
   height: 64px;
 }
+
+.poke_loading_block {
+  height: 100px;
+}
