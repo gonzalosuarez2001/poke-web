@@ -44,14 +44,15 @@ export default function PokeListCard(props) {
           );
           bgChange();
         }}
-        className="btn btn-primary col-12 p-1 mt-3"
+        className="btn btn-primary col-12 p-1 my-3"
       >
         Add to Team
       </button>
+      {/*
       <Link className="col-12 p-0" to={`/pokemon/${props.name}`}>
         <button className="btn btn-secondary p-1 mt-2 mb-3 col-12 text-white">View Info</button>
       </Link>
-      
+      */}
     </div>
   );
 }

@@ -12,13 +12,13 @@ export default function PokeList(props) {
       <div className="container d-flex flex-column align-items-center">
         <div className="poke_loading_block"></div>
         <div className="col-11 text-center fw-bold my-5 rounded loading">
-          <p className="m-0 p-2 text-secondary">Loading Pokemons</p>
+          <p className="m-0 p-2 text-secondary">LOADING POKEMONS</p>
         </div>
       </div>
     );
   } else {
     return (
-      <div className="row justify-content-center">
+      <div className="row justify-content-center mb-3">
         <div className="poke_list_block"></div>
         {pokeContext.pokeList.map((pokemon) => {
           return (

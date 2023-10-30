@@ -1,10 +1,14 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { PokeLayoutContext } from "../contexts/PokeLayoutContext";
-import PokeInfoCard from "../components/pokeInfo/PokeInfoCard";
-import "../css/PokeInfo.css"
+import PokeInfoCard from "../components/pokeInfoPage/PokeInfoCard";
+import "../css/PokeInfo.css";
 
 export default function PokeInfoPage() {
   const pokeLayoutContext = useContext(PokeLayoutContext);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="row justify-content-center mb-3">

@@ -7,20 +7,20 @@
 }
 
 .loading {
-  max-width: 300px !important;
+  max-width: 330px !important;
   animation: change_bg 1.25s linear infinite;
 }
 
 @keyframes change_bg {
   0% {
     background-color: #fff;
-    width: 160px;
+    width: 190px;
   }
   30% {
     background-color: #cce0ff;
   }
   50% {
-    width: 300px;
+    width: 330px;
   }
   60% {
     background-color: #cce0ff;
