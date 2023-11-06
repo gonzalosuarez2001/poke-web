@@ -20,16 +20,18 @@ export default function PokeListPage() {
       for (const name of names) {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
         const data = await res.json();
-        pokeInfo.push({
-          id: data.id,
-          name: data.name,
-          front_sprite: data.sprites.front_default,
-          back_sprite: data.sprites.back_default,
-          types: data.types,
-          stats: data.stats,
-          height: data.height,
-          weight: data.weight,
-        });
+        if (data.sprites.front_default) {
+          pokeInfo.push({
+            id: data.id,
+            name: data.name,
+            front_sprite: data.sprites.front_default,
+            back_sprite: data.sprites.back_default,
+            types: data.types,
+            stats: data.stats,
+            height: data.height,
+            weight: data.weight,
+          });
+        }
       }
       setPokeList(pokeInfo);
       setLoadingPokeList(false);

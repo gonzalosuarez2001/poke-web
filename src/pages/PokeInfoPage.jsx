@@ -15,8 +15,8 @@ export default function PokeInfoPage() {
       {pokeLayoutContext.pokeTeam.length == 0 ? (
         <div className="container d-flex flex-column align-items-center">
           <div className="poke_loading_block"></div>
-          <div className="col-11 text-center fw-bold my-5 rounded">
-            <p className="m-0 p-2 text-secondary rounded">
+          <div className="col-8 col-md-7 col-xl-5 col-xxl-4 text-center fw-bold my-5 rounded">
+            <p className="m-0 p-2 text-white rounded poke_info_loading">
               PLEASE ADD POKEMONS TO THE TEAM TO SEE THEIR STATS
             </p>
           </div>

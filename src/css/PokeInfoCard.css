@@ -10,6 +10,18 @@
   font-size: 14px;
 }
 
+.poke_info_card_title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.poke_info_card_pokeball {
+  scale: .75;
+  opacity: .70;
+}
+
+
 @media (min-width: 768px) {
 
   .poke_info_card_stats {

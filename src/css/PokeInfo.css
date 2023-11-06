@@ -5,3 +5,7 @@
 .poke_loading_block {
   height: 100px;
 }
+
+.poke_info_loading {
+  background-color: #81b9ef !important;
+}
