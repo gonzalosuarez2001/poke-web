@@ -39,7 +39,7 @@ export default function PokeListPage() {
       const filteredPokeInfo = pokeInfo.filter((info) => info !== null);
   
       setPokeList(filteredPokeInfo);
-      setLoadingPokeList(false);
+      //setLoadingPokeList(false);
     } catch (error) {
       console.error("Error fetching pokemons:", error);
     }

@@ -4,10 +4,10 @@
 
 .loading {
   max-width: 330px !important;
-  animation: change_bg 1.25s linear infinite;
+  animation: change_bg_computer 1.25s linear infinite;
 }
 
-@keyframes change_bg {
+@keyframes change_bg_computer {
   0% {
     background-color: #fff;
     width: 190px;
@@ -24,4 +24,32 @@
   100% {
     background-color: #fff;
   }
+}
+
+@media (max-width: 540px) {
+
+  .loading {
+    max-width: 200px !important;
+    animation: change_bg_phone 1.25s linear infinite;
+  }
+
+  @keyframes change_bg_phone {
+    0% {
+      background-color: #fff;
+      width: 200px;
+    }
+    30% {
+      background-color: #81b9ef;
+    }
+    50% {
+      width: 200px;
+    }
+    60% {
+      background-color: #81b9ef;
+    }
+    100% {
+      background-color: #fff;
+    }
+  }
+  
 }
