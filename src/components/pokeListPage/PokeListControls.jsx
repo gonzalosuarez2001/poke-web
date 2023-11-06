@@ -14,12 +14,12 @@ export default function PokeListControls() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
-          className="bi bi-arrow-left-short poke_list_controls_icon"
+          className="bi bi-chevron-bar-left poke_list_controls_icon"
           viewBox="0 0 16 16"
         >
           <path
             fillRule="evenodd"
-            d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"
+            d="M11.854 3.646a.5.5 0 0 1 0 .708L8.207 8l3.647 3.646a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0zM4.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5z"
           />
         </svg>
       </button>
@@ -42,12 +42,12 @@ export default function PokeListControls() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
-          className="bi bi-arrow-right-short poke_list_controls_icon"
+          className="bi bi-chevron-bar-right poke_list_controls_icon"
           viewBox="0 0 16 16"
         >
           <path
             fillRule="evenodd"
-            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+            d="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z"
           />
         </svg>
       </button>
