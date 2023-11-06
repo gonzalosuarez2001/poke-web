@@ -10,30 +10,35 @@ export default function PokeListPage() {
   async function listPokemon(page) {
     try {
       setLoadingPokeList(true);
-      const res = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/?limit=50&offset=${page}0`
+  
+      const listResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=50&offset=${page}0`);
+      const listData = await listResponse.json();
+      const names = listData.results.map((pokemon) => pokemon.name);
+  
+      const pokeInfo = await Promise.all(
+        names.map(async (name) => {
+          const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+          const data = await res.json();
+  
+          if (data.sprites.front_default) {
+            return {
+              id: data.id,
+              name: data.name,
+              front_sprite: data.sprites.front_default,
+              back_sprite: data.sprites.back_default,
+              types: data.types,
+              stats: data.stats,
+              height: data.height,
+              weight: data.weight,
+            };
+          }
+          return null;
+        })
       );
-      const data = await res.json();
-      const names = await data.results.map((pokemon) => pokemon.name);
-
-      const pokeInfo = [];
-      for (const name of names) {
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
-        const data = await res.json();
-        if (data.sprites.front_default) {
-          pokeInfo.push({
-            id: data.id,
-            name: data.name,
-            front_sprite: data.sprites.front_default,
-            back_sprite: data.sprites.back_default,
-            types: data.types,
-            stats: data.stats,
-            height: data.height,
-            weight: data.weight,
-          });
-        }
-      }
-      setPokeList(pokeInfo);
+  
+      const filteredPokeInfo = pokeInfo.filter((info) => info !== null);
+  
+      setPokeList(filteredPokeInfo);
       setLoadingPokeList(false);
     } catch (error) {
       console.error("Error fetching pokemons:", error);
@@ -42,13 +47,13 @@ export default function PokeListPage() {
 
   function previousPage() {
     if (!loadingPokeList && page > 0) {
-      setPage(page - 5);
+      setPage(page - 50);
     }
   }
 
   function nextPage() {
-    if (!loadingPokeList && page < 125) {
-      setPage(page + 5);
+    if (!loadingPokeList && page < 1250) {
+      setPage(page + 50);
     }
   }
 
@@ -60,7 +65,7 @@ export default function PokeListPage() {
 
   function maxPage() {
     if (!loadingPokeList) {
-      setPage(125);
+      setPage(1250);
     }
   }
 
