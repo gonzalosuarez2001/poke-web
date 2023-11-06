@@ -11,7 +11,7 @@ export default function PokeListPage() {
     try {
       setLoadingPokeList(true);
   
-      const listResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=50&offset=${page}0`);
+      const listResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=50&offset=${page}`);
       const listData = await listResponse.json();
       const names = listData.results.map((pokemon) => pokemon.name);
   
