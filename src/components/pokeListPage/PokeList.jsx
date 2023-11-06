@@ -19,7 +19,7 @@ export default function PokeList(props) {
           </div>
         </div>
       ) : (
-        <div className="container-fluid row justify-content-center mb-3">
+        <div className="row justify-content-center mb-3 p-0">
           {pokeContext.pokeList.map((pokemon) => (
             <PokeListCard
               key={pokemon.id}
