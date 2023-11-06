@@ -1,0 +1,13 @@
+.btn-bg {
+  background-color: #81b9ef !important;
+  color: #fff !important;
+}
+
+.btn-bg:hover {
+  background-color: rgb(110, 178, 241) !important;
+}
+
+.poke_list_controls_icon {
+  min-width: 25px;
+  max-width: 25px;
+}

@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import "../../css/PokeListCard.css";
 import { PokeLayoutContext } from "../../contexts/PokeLayoutContext";
 import { useContext, useState } from "react";
@@ -23,7 +22,7 @@ export default function PokeListCard(props) {
     <div
       className={`${bg} col-9 col-sm-5 col-md-3 col-xl-2 col-xxl-2 text-center rounded m-2 px-2 poke_list_card`}
     >
-      <h4 className="pt-3 text-secondary fw-bold">{name}</h4>
+      <h4 className="pt-3 text-secondary fw-bold poke_list_card_title">{name}</h4>
       <img className="pt-3 col-5" src={props.front_sprite} />
       <div className="row justify-content-center pt-3">
         {props.types.map((type, index) => {

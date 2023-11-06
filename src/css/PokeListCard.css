@@ -4,6 +4,12 @@
   -moz-box-shadow: 3px 4px 11px 1px rgba(171, 171, 171, 0.63);
 }
 
+.poke_list_card_title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .white {
   background-color: #fff;
   transition: .01s;
@@ -13,3 +19,5 @@
   background-color: #cce0ff;
   transition: .01s;
 }
+
+

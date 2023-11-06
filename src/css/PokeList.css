@@ -1,9 +1,5 @@
 .poke_list_block {
-  height: 64px;
-}
-
-.poke_loading_block {
-  height: 100px;
+  height: 74px;
 }
 
 .loading {
@@ -17,13 +13,13 @@
     width: 190px;
   }
   30% {
-    background-color: #cce0ff;
+    background-color: #81b9ef;
   }
   50% {
     width: 330px;
   }
   60% {
-    background-color: #cce0ff;
+    background-color: #81b9ef;
   }
   100% {
     background-color: #fff;
