@@ -5,8 +5,21 @@
 }
 
 .poke_info_card_stats {
-  
   background-color: #cce0ff;
+}
+
+.poke_info_card_stats_title {
+  font-size: 14px;
+  text-align: start;
+}
+
+.poke_info_card_stats_value {
+  font-size: 14px;
+  text-align: end;
+}
+
+.poke_info_card_other {
+  background-color: #ffdacc;
   font-size: 14px;
 }
 
@@ -16,16 +29,29 @@
   text-overflow: ellipsis;
 }
 
-.poke_info_card_pokeball {
-  scale: .75;
-  opacity: .70;
+.poke_info_card_other_value {
+  text-align: end;
 }
 
+.poke_info_card_pokeball {
+  scale: 0.75;
+  opacity: 0.7;
+}
 
 @media (min-width: 768px) {
+  .poke_info_card_stats_title {
+    text-align: center;
+  }
 
-  .poke_info_card_stats {
-  
+  .poke_info_card_stats_value {
+    text-align: center;
+  }
+
+  .poke_info_card_other {
+    text-align: center;
+  }
+
+  .poke_info_card_other_value {
     text-align: center;
   }
 }
