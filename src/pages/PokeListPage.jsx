@@ -11,7 +11,7 @@ export default function PokeListPage() {
     try {
       setLoadingPokeList(true);
   
-      const listResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=50&offset=${page}`);
+      const listResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=25&offset=${page}`);
       const listData = await listResponse.json();
       const names = listData.results.map((pokemon) => pokemon.name);
   
@@ -47,13 +47,13 @@ export default function PokeListPage() {
 
   function previousPage() {
     if (!loadingPokeList && page > 0) {
-      setPage(page - 50);
+      setPage(page - 25);
     }
   }
 
   function nextPage() {
-    if (!loadingPokeList && page < 1250) {
-      setPage(page + 50);
+    if (!loadingPokeList && page < 1275) {
+      setPage(page + 25);
     }
   }
 
@@ -65,7 +65,7 @@ export default function PokeListPage() {
 
   function maxPage() {
     if (!loadingPokeList) {
-      setPage(1250);
+      setPage(1275);
     }
   }
 
